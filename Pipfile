@@ -1,0 +1,38 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+"flake8" = "*"
+coverage = "*"
+vcrpy = "*"
+
+
+[packages]
+
+arrow = "*"
+chardet = "*"
+dj-database-url = "*"
+django = "*"
+env-tools = "*"
+gunicorn = "*"
+idna = "*"
+markdown = "*"
+"psycopg2" = "*"
+pytz = "*"
+requests = "*"
+"urllib3" = "*"
+whitenoise = "*"
+requests-mock = "*"
+celery = "*"
+redis = "*"
+open-humans-api = "*"
+
+
+[requires]
+
+python_version = "3.6"
