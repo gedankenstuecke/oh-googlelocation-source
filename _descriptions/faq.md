@@ -27,5 +27,5 @@ Go into your *settings* and choose location. 2. In your location settings allow 
 ### *Google Maps* app on iOS
 Go into your *settings* and choose *Personal content*. 2. Under the *Location settings* heading turn on the *Location Services* and the *Location History*:
 
-<a href='static/googlemaps-step1.jpg' target='_blank'><img src='static/google-step1.jpg' width=49%/></a>
-<a href='static/googlemaps-step2.jpg' target='_blank'><img src='static/google-step2.jpg' width=49%/></a>
+<a href='static/googlemaps-step1.jpg' target='_blank'><img src='static/googlemaps-step1.jpg' width=49%/></a>
+<a href='static/googlemaps-step2.jpg' target='_blank'><img src='static/googlemaps-step2.jpg' width=49%/></a>
