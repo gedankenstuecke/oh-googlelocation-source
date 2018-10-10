@@ -21,7 +21,7 @@ Finally, **use the upload form on this webpage to add the file**. You're done!
 ## How to collect GPS with Google Location History
 You can enable the *Google Location History* from your iOS or Android phone you can use the *Google Maps* or *Google*  apps by turning on the following things.
 
-### *Google* app on Android
+### *Google* app on iOS
 Go into your *settings* and choose location. 2. In your location settings allow the *Location* to run always and then set up the *Location History*:
 
 <a href='static/google-step1.jpg' target='_blank'><img src='static/google-step1.jpg' width=49%/></a>
