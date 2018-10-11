@@ -29,3 +29,15 @@ Go into your *settings* and choose *Personal content*. 2. Under the *Location se
 
 <a href='static/googlemaps-step1.jpg' target='_blank'><img src='static/googlemaps-step1.jpg' width=49%/></a>
 <a href='static/googlemaps-step2.jpg' target='_blank'><img src='static/googlemaps-step2.jpg' width=49%/></a>
+
+### Turning on *Location History* on Android
+
+Go to *Settings* on your Android device
+
+1. In the *Settings* app for your device choose *Google*, then choose *Google Account*.
+2. Tap *Data & Personalization*.
+3. Under *Activity controls* tap *Location History*
+4. Turn "*Location History"* on.
+5. Also turn location reporting on for your device, which should be listed below
+
+<a href='static/android.png' target='_blank'><img src='static/android.png' width=100%/></a>
