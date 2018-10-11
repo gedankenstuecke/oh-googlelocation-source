@@ -43,4 +43,4 @@ Go to *Settings* on your Android device
 4. Turn "*Location History"* on.
 5. Also turn location reporting on for your device, which should be listed below
 
-<a href='static/android.png' target='_blank'><img src='static/android.png' width=100%/></a>
+<a href='static/android.png' target='_blank'><img src='static/android.png' width=50%/></a>
