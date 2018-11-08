@@ -32,7 +32,9 @@ DEBUG = False if os.getenv('DEBUG', '').lower() == 'false' else True
 # Infer if this is running on Heroku based on this being set.
 HEROKUCONFIG_APP_NAME = os.getenv('HEROKUCONFIG_APP_NAME', '')
 ON_HEROKU = bool(HEROKUCONFIG_APP_NAME)
-
+if ON_HEROKU:
+    SECURE_SSL_REDIRECT = True
+    
 ALLOWED_HOSTS = ['*']
 
 # Read OH settings from .env/environment variables
