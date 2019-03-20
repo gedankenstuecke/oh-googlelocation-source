@@ -41,7 +41,7 @@ def get_json(tf_in):
     if tf_in.name.endswith('.zip'):
         zf = zipfile.ZipFile(tf_in)
         for f in zf.filelist:
-            if f.filename.endswith('Location History.json'):
+            if f.filename.endswith('.json'):
                 return zf.read(f)
     elif tf_in.name.endswith('.json'):
         return open(tf_in.name).read()
