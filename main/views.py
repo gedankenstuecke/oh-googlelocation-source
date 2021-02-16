@@ -259,12 +259,16 @@ def about(request):
 def list_files(request):
     if request.user.is_authenticated and request.user.username != 'admin':
         oh_member = request.user.openhumansmember
-        data = ohapi.api.exchange_oauth2_member(
-            oh_member.get_access_token(),
-            base_url=OH_BASE_URL)
-        context = {'files': data['data']}
-        return render(request, 'main/list.html',
-                      context=context)
+        try:
+            data = ohapi.api.exchange_oauth2_member(
+                oh_member.get_access_token(),
+                base_url=OH_BASE_URL)
+            context = {'files': data['data']}
+            return render(request, 'main/list.html',
+                          context=context)
+        except:
+            logout(request)
+            return redirect('index')
     return redirect('index')
 
 
