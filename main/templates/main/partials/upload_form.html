@@ -42,11 +42,13 @@
     </div>
     <input type="button" class="btn btn-primary" value="Upload your data" onClick="startUpload()">
   </form>
+  <p id='progbar'>
+  </p>
   <p id="infotext">
-    <small>
-      The Javascript uploader has failed for some users in the past. You could try another browser
-      or <a href="{% url 'upload_old' %}">use the simpler upload form</a> if you prefer that.
-    </small>
+  <small>
+    The Javascript uploader has failed for some users in the past. You could try another browser
+    or <a href="{% url 'upload_old' %}">use the simpler upload form</a> if you prefer that.
+  </small>
   </p>
 </div>
 <script src="{% static 'upload.js' %}"></script>

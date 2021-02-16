@@ -15,7 +15,7 @@ function startUpload() {
     return;
   }
   var replacement = '<div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div></div>';
-  $("#infotext").replaceWith('<div id="upload_form">' + replacement + '</div>');
+  $("#progbar").replaceWith('<div id="upload_form">' + replacement + '</div>');
   file_metadata.forEach(function (file) {
     var data = file.fields;
     var metadata = {'tags': JSON.parse(data.tags), 'description': data.description};
