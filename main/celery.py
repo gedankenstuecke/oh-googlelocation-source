@@ -41,10 +41,33 @@ def get_json(tf_in):
     if tf_in.name.endswith('.zip'):
         zf = zipfile.ZipFile(tf_in)
         for f in zf.filelist:
-            if f.filename.endswith('.json'):
+            if f.filename.endswith('.json') and len(f.filename.split('/')) == 3:
                 return zf.read(f)
     elif tf_in.name.endswith('.json'):
         return open(tf_in.name).read()
+    else:
+        return None
+
+
+def get_semantic_data(tf_in, tmp_dir, member, access_token):
+    # Get the new semantic files and save those too
+    if tf_in.name.endswith('.zip'):
+        zf = zipfile.ZipFile(tf_in)
+        for f in zf.filelist:
+            if f.filename.endswith('.json') and len(f.filename.split('/')) == 5:
+                file_content = json.loads(zf.read(f))
+                file_name = tmp_dir + '/' + f.filename.split('/')[-1]
+                with open(file_name, 'w') as raw_file:
+                    json.dump(file_content, raw_file)
+                metadata = {
+                            'description':
+                            'Semantic Google Location History JSON',
+                            'tags': ['google location history', 'gps', 'semantic data'],
+                            'creation_date': arrow.get().format(),
+                    }
+                api.upload_aws(file_name, metadata,
+                               access_token, base_url=OH_BASE_URL,
+                               project_member_id=str(member['project_member_id']))
     else:
         return None
 
@@ -71,6 +94,7 @@ def process_file(dfile, access_token, member, metadata):
         api.upload_aws(output_file, metadata,
                        access_token, base_url=OH_BASE_URL,
                        project_member_id=str(member['project_member_id']))
+        get_semantic_data(tf_in, tmp_directory, member, access_token)
     else:
         api.message("Google Location History: A broken file was deleted",
                     "While processing your Google Location History file "
